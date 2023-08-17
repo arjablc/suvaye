@@ -23,6 +23,7 @@ class _ServicesSectionState extends State<ServicesSection> {
         SizedBox(
           height: 150,
           child: PageView.builder(
+              physics: const BouncingScrollPhysics(),
               controller: _pageController,
               onPageChanged: (currentPage) => setState(() {
                     _activePage = currentPage;

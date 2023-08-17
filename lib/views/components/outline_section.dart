@@ -11,6 +11,7 @@ class OutlinesGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
+      physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 2 / 1,
