@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:suvaye/constants/asset_paths.dart';
 
+import '../../constants/asset_paths.dart';
 import '../components/bottom_nav_bar.dart';
 import '../components/outline_section.dart';
 import '../components/section_title.dart';
@@ -21,7 +20,7 @@ class HomePageView extends StatelessWidget {
           children: [
             Row(
               children: [
-                Image.asset("assets/logo.png"),
+                Image.asset(ImageAssetPath.logoIcon),
                 const Text(
                   "Suvaye",
                   style: TextStyle(

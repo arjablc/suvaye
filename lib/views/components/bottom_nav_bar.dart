@@ -17,14 +17,11 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      elevation: 0,
       currentIndex: _currentIndex,
-      backgroundColor: Colors.white,
       onTap: (value) => setState(() {
         _currentIndex = value;
       }),
       iconSize: 24,
-      selectedLabelStyle: const TextStyle(fontSize: 12, color: Colors.grey),
       items: [
         const BottomNavigationBarItem(
             label: "Today", icon: Icon(Icons.calendar_today_outlined)),

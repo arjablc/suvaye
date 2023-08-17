@@ -5,4 +5,5 @@ class ImageAssetPath {
   static const String vectorIcon = "assets/Vector.png";
   static const String webIcon = "assets/Web.png";
   static const String serviceIcon = "assets/service_icon.svg";
+  static const String logoIcon = "assets/logo.png";
 }

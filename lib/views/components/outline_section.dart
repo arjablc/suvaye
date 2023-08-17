@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:suvaye/controller/outline_controller.dart';
+
+import '../../controller/outline_controller.dart';
 
 class OutlinesGrid extends StatelessWidget {
   OutlinesGrid({
