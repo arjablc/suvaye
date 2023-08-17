@@ -1,7 +1,12 @@
 import 'package:suvaye/model/services_model.dart';
 
 class ServicesController {
-  //In production this is fetched from backend...
+  static final ServicesController _instance = ServicesController._internal();
+  factory ServicesController() {
+    return _instance;
+  }
+  ServicesController._internal();
+
   final List<ServicesModel> _servicesList = [
     ServicesModel(
         serviceTitle: "Web App Development",

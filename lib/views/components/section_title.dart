@@ -19,7 +19,7 @@ class SectionTitle extends StatelessWidget {
       children: [
         Text(
           sectionTitle,
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         TextButton(
             onPressed: () => action,

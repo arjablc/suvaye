@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:suvaye/constants/asset_paths.dart';
 
-import '../../controller/services_controller.dart';
-import '../widgets/section_title.dart';
-import '../widgets/services_section.dart';
+import '../components/bottom_nav_bar.dart';
+import '../components/outline_section.dart';
+import '../components/section_title.dart';
+import '../components/services_section.dart';
 
 class HomePageView extends StatelessWidget {
-  HomePageView({
+  const HomePageView({
     Key? key,
   }) : super(key: key);
-
-  final ServicesController _servicesController = ServicesController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +38,8 @@ class HomePageView extends StatelessWidget {
           ],
         ),
       ),
-      body: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -46,21 +47,28 @@ class HomePageView extends StatelessWidget {
             children: [
               Text(
                 "Hello, Suvaye Tech",
-                style: TextStyle(fontSize: 20),
+                style: Theme.of(context).textTheme.displayMedium,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              SectionTitle(
+              const SectionTitle(
                 actionTitle: "see more",
                 action: null,
                 sectionTitle: "Services",
               ),
-              ServicesSection()
+              const ServicesSection(),
+              const SizedBox(
+                height: 20,
+              ),
+              const SectionTitle(
+                  sectionTitle: "Outline", actionTitle: "See more"),
+              SizedBox(height: 300, child: OutlinesGrid())
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const CustomBottomNavBar(),
     );
   }
 }
